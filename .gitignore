@@ -9,7 +9,6 @@
 *.csv
 *.pdf
 *.log
-*.png
 data/
 work_dir/
 
