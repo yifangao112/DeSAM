@@ -45,7 +45,7 @@ python precompute_embeddings.py --work_dir your_work_dir
 python desam_train_wholebox.py --work_dir your_work_dir --center=1 --pred_embedding=True --mixprecision=True
 ```
 
-#### grid Points mode (segment-anything mode):
+#### grid points mode (segment-anything mode):
 
 ```bash
 python desam_train_gridpoints.py --work_dir your_work_dir --center=1 --pred_embedding=True --mixprecision=True
