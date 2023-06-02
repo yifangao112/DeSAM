@@ -61,7 +61,7 @@ If this code is helpful for your study, please cite our [paper]():
 @article{gao2023desam,
   title={DeSAM: Decoupling Segment Anything Model for Generalizable Medical Image Segmentation},
   author={Yifan Gao and Wei Xia and Dingdu Hu and Xin Gao},
-  journal={arXiv preprint arXiv:2306.00001},
+  journal={arXiv preprint arXiv:2306.00499},
   year={2023}
 }
 ```
