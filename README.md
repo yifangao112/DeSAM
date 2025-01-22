@@ -1,6 +1,11 @@
 # DeSAM 
 This is the official repository for DeSAM: Decoupled Segment Anything Model for Generalizable Medical Image Segmentation.
 
+![Teaser image](./assets/desam.png)
+> **[DeSAM: Decoupling Segment Anything Model for Generalizable Medical Image Segmentation](https://arxiv.org/abs/2306.00499)**<br>
+> Yifan Gao, Wei Xia, Dingdu Hu, Wenkui Wang and Xin Gao<br>
+> *MICCAI 2024*
+
 ## Abstract
 Deep learning-based medical image segmentation models often suffer from domain shift, where the models trained on a source domain do not generalize well to other unseen domains. As a prompt-driven foundation model with powerful generalization capabilities, the Segment Anything Model (SAM) shows potential for improving the cross-domain robustness of medical image segmentation. However, SAM performs significantly worse in automatic segmentation scenarios than when manually prompted, hindering its direct application to domain generalization. Upon further investigation, we discovered that the degradation in performance was related to the coupling effect of inevitable poor prompts and mask generation. To address the coupling effect, we propose the Decoupled SAM (DeSAM). DeSAM modifies SAM’s mask decoder by introducing two new modules: a prompt-relevant IoU module (PRIM) and a prompt-decoupled mask module (PDMM). PRIM predicts the IoU score and generates mask embeddings, while PDMM extracts multi-scale features from the intermediate layers of the image encoder and fuses them with the mask embeddings from PRIM to generate the final segmentation mask. This decoupled design allows DeSAM to leverage the pre-trained weights while minimizing the performance degradation caused by poor prompts. We conducted experiments on publicly available cross-site prostate and cross-modality abdominal image segmentation datasets. The results show that our DeSAM leads to a substantial performance improvement over previous state-of-the-art domain generalization methods.
 
