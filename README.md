@@ -2,7 +2,7 @@
 This is the official repository for DeSAM: Decoupled Segment Anything Model for Generalizable Medical Image Segmentation.
 
 ![Teaser image](./assets/desam2.png)
-> **[DeSAM: Decoupling Segment Anything Model for Generalizable Medical Image Segmentation](https://link.springer.com/chapter/10.1007/978-3-031-72390-2_48)**
+> **[DeSAM: Decoupled Segment Anything Model for Generalizable Medical Image Segmentation](https://link.springer.com/chapter/10.1007/978-3-031-72390-2_48 )**
 > <br>Yifan Gao, Wei Xia, Dingdu Hu, Wenkui Wang and Xin Gao<br>
 > MICCAI 2024
 
