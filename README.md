@@ -21,7 +21,7 @@ Our files are organized as follows, similar to nnU-Net:
     - image_embeddings
     - results_folder
 
-1. Download the cross-site prostate dataset Google Drive, unzip it and put files under the `work_dir/raw_data` dir. The data also host on Baidu Netdisk, password: dsam. The original pre-processing data was downloaded from MaxStyle, many thanks!
+1. Download the cross-site prostate dataset [Google Drive](https://drive.google.com/drive/folders/18dOwjmUNhLYaq01OXV1FLThcDG_gqd5C?usp=sharing), unzip it and put files under the `work_dir/raw_data` dir. The data also host on [Baidu Netdisk](https://pan.baidu.com/s/1fY_aUPwd0Nf8S-Xn8tayZw?pwd=dsam), password: dsam. The original pre-processing data was downloaded from MaxStyle, many thanks!
 
 2. Download [SAM ViT-H checkpoint](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and place it at `work_dir/checkpoint/sam_vit_h_4b8939.pth`.
 
