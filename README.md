@@ -2,14 +2,14 @@
 This is the official repository for DeSAM: Decoupled Segment Anything Model for Generalizable Medical Image Segmentation.
 
 ## Abstract
-Deep learning based automatic medical image segmentation models often suffer from domain shift, where the models trained on a source domain do not generalize well to other unseen domains. As a vision foundation model with powerful generalization capabilities, Segment Anything Model (SAM) shows potential for improving the cross-domain robustness of medical image segmentation. However, SAM and its finetuned models performed significantly worse in fully automatic mode compared to when given manual prompts. Upon further investigation, we discovered that the degradation in performance was related to the coupling effect of poor prompts and mask segmentation. In fully automatic mode, the presence of inevitable poor prompts (such as points outside the mask or boxes significantly larger than the mask) can significantly mislead mask generation. To address the coupling effect, we propose the decoupling SAM (DeSAM). DeSAM modifies SAM’s mask decoder to decouple mask generation and prompt embeddings while leveraging pretrained weights. We conducted experiments on publicly available prostate cross-site datasets. The results show that DeSAM improves dice score by an average of 8.96% (from 70.06% to 79.02%) compared to previous state-of-the-art domain generalization method. Moreover, DeSAM can be trained on personal devices with entry-level GPU since our approach does not rely on tuning the heavyweight image encoder.
+Deep learning-based medical image segmentation models often suffer from domain shift, where the models trained on a source domain do not generalize well to other unseen domains. As a prompt-driven foundation model with powerful generalization capabilities, the Segment Anything Model (SAM) shows potential for improving the cross-domain robustness of medical image segmentation. However, SAM performs significantly worse in automatic segmentation scenarios than when manually prompted, hindering its direct application to domain generalization. Upon further investigation, we discovered that the degradation in performance was related to the coupling effect of inevitable poor prompts and mask generation. To address the coupling effect, we propose the Decoupled SAM (DeSAM). DeSAM modifies SAM’s mask decoder by introducing two new modules: a prompt-relevant IoU module (PRIM) and a prompt-decoupled mask module (PDMM). PRIM predicts the IoU score and generates mask embeddings, while PDMM extracts multi-scale features from the intermediate layers of the image encoder and fuses them with the mask embeddings from PRIM to generate the final segmentation mask. This decoupled design allows DeSAM to leverage the pre-trained weights while minimizing the performance degradation caused by poor prompts. We conducted experiments on publicly available cross-site prostate and cross-modality abdominal image segmentation datasets. The results show that our DeSAM leads to a substantial performance improvement over previous state-of-the-art domain generalization methods.
 
 ## Training DeSAM on cross-site prostate dataset
 
 ### Installation 
 1. Create a virtual environment `conda create -n desam python=3.10 -y` and activate it `conda activate desam`
 2. Install Pytorch
-3. git clone xxx
+3. git clone https://github.com/yifangao112/DeSAM.git
 4. Enter the DeSAM folder `cd DeSAM` and run `pip install -r requirements.txt`
 
 ### Data preparation and preprocessing
@@ -47,4 +47,17 @@ python desam_train_gridpoints.py --work_dir your_work_dir --center=1 --pred_embe
 
 ## Acknowledgements
 This repository is based on [MedSAM](https://github.com/bowang-lab/MedSAM). We thank Jun Ma for making the source code of MedSAM publicly available. Part of codes are reused from the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet).
+
+## Citation
+If this code is helpful for your study, please cite our [paper]():
+```
+@inproceedings{gao2024desam,
+  title={Desam: Decoupled segment anything model for generalizable medical image segmentation},
+  author={Gao, Yifan and Xia, Wei and Hu, Dingdu and Wang, Wenkui and Gao, Xin},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={509--519},
+  year={2024},
+  organization={Springer}
+}
+```
 
