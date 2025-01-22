@@ -2,7 +2,9 @@
 This is the official repository for DeSAM: Decoupled Segment Anything Model for Generalizable Medical Image Segmentation.
 
 ![Teaser image](./assets/desam2.png)
-> **[DeSAM: Decoupling Segment Anything Model for Generalizable Medical Image Segmentation](https://link.springer.com/chapter/10.1007/978-3-031-72390-2_48)**<br>
+> **[DeSAM: Decoupling Segment Anything Model for Generalizable Medical Image Segmentation](https://link.springer.com/chapter/10.1007/978-3-031-72390-2_48
+        
+        )**<br>
 > Yifan Gao, Wei Xia, Dingdu Hu, Wenkui Wang and Xin Gao<br>
 > MICCAI 2024
 
@@ -14,7 +16,7 @@ Deep learning-based medical image segmentation models often suffer from domain s
 ### Installation 
 1. Create a virtual environment `conda create -n desam python=3.10 -y` and activate it `conda activate desam`
 2. Install Pytorch
-3. git clone https://github.com/yifangao112/DeSAM.git
+3. git clone `https://github.com/yifangao112/DeSAM.git`
 4. Enter the DeSAM folder `cd DeSAM` and run `pip install -r requirements.txt`
 
 ### Data preparation and preprocessing
